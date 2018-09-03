@@ -5,6 +5,10 @@ variable tags {
     type = "map"
 }
 
+variable subnet_tags {
+    description = "Different tag values which should be assigned to AWS resources created via Terraform)"
+    type = "map"
+}
 # AWS Regions / Zones
 
 variable aws_region {

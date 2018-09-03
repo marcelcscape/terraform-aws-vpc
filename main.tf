@@ -36,7 +36,7 @@ resource "aws_subnet" "public_subnet" {
   availability_zone = "${var.aws_zones[count.index]}"
   map_public_ip_on_launch = true
 
-  tags = "${merge(map("Name", format("%v-public-%v", var.vpc_name, var.aws_zones[count.index])), var.tags)}"
+  tags = "${merge(map("Name", format("%v-public-%v", var.vpc_name, var.aws_zones[count.index])), var.tags, var.subnet_tags)}"
 }
 
 ############
